@@ -4,15 +4,15 @@ pipeline {
     stage('build') {
       agent any
       environment {
-       LOG_LEVEL='INFO 
+       LOG_LEVEL='INFO'
       }
       steps {
-        echo 'Building Release ${RELEASE} with log level ${LOG_LEVEL}...'
+        echo "Building Release ${RELEASE} with log level ${LOG_LEVEL}..."
       }
     }
     stage('Test') {
       steps {
-        echo 'Testing Release ${RELEASE} but log level ${LOG_LEVEL} not visible...'
+        echo "Testing Release ${RELEASE} but log level ${LOG_LEVEL} not visible..."
       }
     }
   }
